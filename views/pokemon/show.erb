@@ -1,0 +1,13 @@
+<h2><%= @pokemon.name %><a href='/pokemon/<%= @pokemon.id %>'/edit>(edit)</a></h2>
+<h4><%= @pokemon.poke_type %></h4>
+<img class="photo_pokemon" src="<%= @pokemon.img_url %>">
+<h4><%= @pokemon.cp %></h4>
+
+<form action="/pokemon/<%= @pokemon.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>
+
+<br>
+
+<a href='/pokemon'>Pokedex Inventory</a>

@@ -1,8 +1,11 @@
-require 'active_record'
-require 'ffaker'
-require 'pg'
-require_relative 'connection'
-require_relative '../models/pokemon'
+# require 'ffaker'
+require "pg"
+require "active_record"
+# require 'pry'
+# require "sinatra"
+# require "sinatra/reloader"
+require_relative "connection"
+require_relative "../models/pokemon"
 
 Pokemon.destroy_all
 Pokemon.create(name: "Charmander", cp: rand(800), poke_type: "fire", img_url: "https://img.pokemondb.net/artwork/charmander.jpg")
